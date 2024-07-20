@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 
 .btn {
@@ -8,9 +8,23 @@
 @tailwind utilities;
 
 /* importance of order in Tailwind */
-.text-vic {
+/* .text-vic {
     @apply text-yellow-800 bg-green-400;
+} */
+
+
+/* Layer Directive */
+
+@tailwind base;
+@tailwind components;
+
+.componentsafter {
+    text-align: center;
 }
+@tailwind utilities;
 
-
-
+@layer components {
+    .btn {
+        @apply text-white bg-red-600 rounded-xl px-2 px-1 m-4 text-sm;
+    }
+}
